@@ -4,12 +4,17 @@ public class ContaBancaria {
     int saldo;
 
 
+    public ContaBancaria(int saldoInicial) {
+        this.saldo = saldoInicial;
+    }
 
-    public void depositar(int valor) {
+
+
+    public void deposita(int valor) {
         this.saldo += valor;
     }
 
-    public boolean levantar(int valor) {
+    public boolean levanta(int valor) {
         if(this.saldo < valor) {
             return false;
         }
@@ -22,9 +27,6 @@ public class ContaBancaria {
         return saldo;
     }
 
-    public void setSaldo(int saldo) {
-        this.saldo = saldo;
-    }
 
     public String getSaldoComoString() {
         return String.valueOf(this.saldo);
